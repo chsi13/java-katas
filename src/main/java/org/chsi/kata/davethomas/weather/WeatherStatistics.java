@@ -15,25 +15,23 @@ import static java.nio.file.Paths.get;
  */
 public class WeatherStatistics {
 
-    public int getDayWithSmallestTempSpread() throws Exception {
-        SortedMap<Integer, Integer> weatherData;
+    private SortedMap<Integer, Integer> weatherData;
 
+    public WeatherStatistics() throws IOException {
         Path path = get("src/main/resources/weather.dat");
 
         final List<String> strings = readFiles(path);
 
         removeLineToIgnore(strings);
 
-        weatherData = buildWeatherData(strings);
-
-        Integer bestTempSpreadDay = getDayWithGreatestTemperatureSpread(weatherData);
-
-        System.out.println("Day with greated spread of temperature : " + bestTempSpreadDay);
-
-        return bestTempSpreadDay;
+        this.weatherData = buildWeatherData(strings);
     }
 
-    private Integer getDayWithGreatestTemperatureSpread(SortedMap<Integer, Integer> weatherData) {
+    public int getDayWithSmallestTemperatureSpread() throws Exception {
+        return weatherData.entrySet().stream().max((e1, e2) -> e2.getValue() - e1.getValue()).get().getKey();
+    }
+
+    public int getDayWithGreatestTemperatureSpread() {
         return weatherData.entrySet().stream().max((e1, e2) -> e1.getValue() - e2.getValue()).get().getKey();
     }
 

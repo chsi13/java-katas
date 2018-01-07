@@ -13,7 +13,15 @@ public class WeatherStatisticsTest {
     public void getSmallestTempSpread() throws Exception {
         WeatherStatistics weatherStatistics = new WeatherStatistics();
 
-        assertEquals(9 ,weatherStatistics.getDayWithSmallestTempSpread());
+        assertEquals(14 ,weatherStatistics.getDayWithSmallestTemperatureSpread());
+
+    }
+
+    @Test
+    public void getGreatestTempSpread() throws Exception {
+        WeatherStatistics weatherStatistics = new WeatherStatistics();
+
+        assertEquals(9 ,weatherStatistics.getDayWithGreatestTemperatureSpread());
 
     }
 }
