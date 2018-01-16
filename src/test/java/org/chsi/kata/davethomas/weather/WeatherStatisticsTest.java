@@ -1,5 +1,6 @@
 package org.chsi.kata.davethomas.weather;
 
+import org.chsi.kata.davethomas.datamunging.WeatherStatistics;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
