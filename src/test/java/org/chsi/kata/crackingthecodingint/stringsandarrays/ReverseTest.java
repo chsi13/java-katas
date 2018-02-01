@@ -1,4 +1,4 @@
-package org.chsi.kata.crackingthecodingint.strings;
+package org.chsi.kata.crackingthecodingint.stringsandarrays;
 
 import org.junit.Test;
 
