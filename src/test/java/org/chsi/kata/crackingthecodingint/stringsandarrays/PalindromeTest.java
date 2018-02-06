@@ -18,4 +18,17 @@ public class PalindromeTest {
     public void isNotAPalindrome() {
         assertFalse(new Palindrome().isAPalindrome("test"));
     }
+
+    @Test
+    public void canFormAPalindrome() {
+        assertTrue(new Palindrome().canFormAPalindrome("aad"));
+        assertTrue(new Palindrome().canFormAPalindrome("ers   aerss s   "));
+        assertTrue(new Palindrome().canFormAPalindrome("emmesse"));
+    }
+
+    @Test
+    public void canNotFormAPalindrome() {
+        assertFalse(new Palindrome().canFormAPalindrome("aade"));
+        assertFalse(new Palindrome().canFormAPalindrome("ers   aeriss s   "));
+    }
 }
