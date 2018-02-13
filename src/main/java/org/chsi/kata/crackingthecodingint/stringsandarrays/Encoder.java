@@ -4,6 +4,15 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Implementation of simple String compression.
+ *
+ * using count of repeated characters.
+ *
+ * Ex. aabcc -> a2b1c2
+ *
+ * if compressed string is greater than original, return the original
+ */
 public class Encoder {
 
     public String encode(String toEncode) {

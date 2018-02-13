@@ -1,5 +1,8 @@
 package org.chsi.kata.crackingthecodingint.stringsandarrays;
 
+/**
+ * Check if String contains only one edit action.
+ */
 public class OnlyOneEdition {
 
 

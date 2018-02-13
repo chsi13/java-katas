@@ -2,6 +2,7 @@ package org.chsi.kata.davethomas.binarysearch;
 
 /**
  * Created by chsi on 04/01/2018.
+ * Recursive implementation of a Binary Search.
  */
 public class ImplRecursive {
 
