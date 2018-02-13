@@ -24,4 +24,14 @@ public class LinkedListNode {
     public boolean hasNext() {
         return next != null;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.data == ((LinkedListNode) obj).data;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s", data);
+    }
 }
