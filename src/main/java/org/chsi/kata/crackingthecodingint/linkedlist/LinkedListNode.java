@@ -27,11 +27,28 @@ public class LinkedListNode {
 
     @Override
     public boolean equals(Object obj) {
-        return this.data == ((LinkedListNode) obj).data;
+        LinkedListNode toCompare = (LinkedListNode) obj;
+            if(this.data == toCompare.data) {
+                if(this.next != null && toCompare.next != null) {
+                    return this.next.equals(toCompare.next);
+                }
+                return true;
+            }
+        return false;
     }
 
     @Override
     public String toString() {
         return String.format("%s", data);
+    }
+
+    public static LinkedListNode of(int... values) {
+        LinkedListNode result  = new LinkedListNode(values[0], null);
+        LinkedListNode pointer = result;
+        for (int i  = 1; i < values.length; i ++) {
+            pointer.next = new LinkedListNode(values[i], null);
+            pointer = pointer.next;
+        }
+        return result;
     }
 }
