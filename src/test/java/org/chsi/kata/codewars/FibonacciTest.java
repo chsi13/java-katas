@@ -14,6 +14,7 @@ public class FibonacciTest {
         assertEquals(21, Fibonacci.fibIterative(8));
         assertEquals(34, Fibonacci.fibIterative(9));
         assertEquals(55, Fibonacci.fibIterative(10));
+        assertEquals(75025, Fibonacci.fibRecursive(25));
     }
 
     @Test
@@ -24,5 +25,6 @@ public class FibonacciTest {
         assertEquals(21, Fibonacci.fibRecursive(8));
         assertEquals(34, Fibonacci.fibRecursive(9));
         assertEquals(55, Fibonacci.fibRecursive(10));
+        assertEquals(75025, Fibonacci.fibRecursive(25));
     }
 }
